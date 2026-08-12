@@ -1,10 +1,9 @@
-# Pages fixes and proposed changes
+# Removed failing Pages workflow
 
-This branch (fix/pages-setup) contains proposed changes to enable and verify GitHub Pages publishing.
+This branch removes the redundant and failing workflow `.github/workflows/deploy-pages.yml`.
 
-Planned changes (you can review in this PR):
+Rationale:
+- The built-in GitHub Pages "pages build and deployment" process is already successfully deploying the site on pushes to main.
+- The custom workflow was failing and created noisy failed runs. Removing it keeps the repository deploying correctly via Pages without extra failures.
 
-- Add a small workflow or checks to validate site build if needed.
-- Update site content as desired.
-
-For now, this branch only adds this file to open a PR from.
+If you prefer a custom workflow, I can add a corrected deploy workflow in a follow-up PR.
