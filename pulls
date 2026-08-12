@@ -1,0 +1,9 @@
+Title: chore: remove redundant failing Pages workflow
+
+This PR deletes the custom `.github/workflows/deploy-pages.yml` workflow which was failing and creating noisy failed runs.
+
+Rationale:
+- The built-in GitHub Pages "pages build and deployment" process is already successfully deploying the site on pushes to main.
+- Removing the redundant failing workflow keeps Pages deployments clean and reduces noise.
+
+If you'd like a custom deploy workflow instead, I can add a corrected version in a follow-up PR.
